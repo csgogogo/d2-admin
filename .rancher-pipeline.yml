@@ -1,0 +1,10 @@
+stages:
+- name: nodejs编译
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |-
+        npm -i
+        npm run build
+timeout: 60
+notification: {}
